@@ -1,0 +1,15 @@
+[user]
+	email = bitttttten@gmail.com
+	name = bitten
+[push]
+	default = simple
+[alias]
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(magenta)(%an)%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative --left-right
+    tree = log --oneline --decorate --all --graph
+    resetfile = git checkout HEAD -- $1
+    statusm = ls-files --modified
+    addm = "!f(){ echo 'Attempting to add only modified files..'; git ls-files --modified; git ls-files --modified | xargs git add; };f"
+[color]
+    ui = auto
+[format]
+    pretty = "%H %ci %ce %ae %d %s"
